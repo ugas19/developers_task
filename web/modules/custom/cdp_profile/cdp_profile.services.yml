@@ -1,0 +1,8 @@
+services:
+  profile_event_subscriber:
+    class: 'Drupal\cdp_profile\EventSubscriber\ProfileEventSubscriber'
+    arguments:
+      - '@current_user'
+      - '@router.route_provider'
+    tags:
+      - { name: 'event_subscriber' }
