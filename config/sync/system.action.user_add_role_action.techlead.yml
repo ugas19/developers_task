@@ -1,0 +1,14 @@
+uuid: bb08a114-e8ea-48c1-b807-2cf58ca0d2e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.techlead
+  module:
+    - user
+id: user_add_role_action.techlead
+label: 'Add the techlead role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: techlead

@@ -1,0 +1,25 @@
+uuid: 157d40fc-9ae1-42ea-9f2d-bc5598ee67a0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.user.user.field_real
+  module:
+    - user
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content:
+  field_real:
+    weight: 0
+    label: inline
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+hidden:
+  member_for: true

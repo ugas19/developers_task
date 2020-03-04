@@ -1,0 +1,25 @@
+uuid: 6fc54cca-e1de-46e1-af28-cbbd312478e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.user.details_change
+    - field.field.user.user.field_real
+  module:
+    - user
+id: user.user.details_change
+targetEntityType: user
+bundle: user
+mode: details_change
+content:
+  field_real:
+    type: boolean_checkbox
+    weight: 0
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden:
+  account: true
+  language: true
+  timezone: true

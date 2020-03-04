@@ -1,0 +1,23 @@
+uuid: 7465a76f-e6c7-4d95-9c83-d44e49df01c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.user.registration_techlead
+    - field.field.user.user.field_real
+  module:
+    - user
+id: user.user.registration_techlead
+targetEntityType: user
+bundle: user
+mode: registration_techlead
+content:
+  account:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_real: true
+  language: true
+  timezone: true

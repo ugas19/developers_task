@@ -1,9 +1,8 @@
-name: cdp_heme
+name: cdp_theme
 type: theme
 description: 'cdp_theme.'
 core: 8.x
 libraries:
-#  - cdp_theme/sidebar_two
   - cdp_theme/global-styling
   - cdp_theme/global-scripts
 regions:

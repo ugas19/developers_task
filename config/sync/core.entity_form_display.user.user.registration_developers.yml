@@ -1,0 +1,29 @@
+uuid: 579d5081-fc71-4399-91c1-d31957a69668
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.user.registration_developers
+    - field.field.user.user.field_real
+  module:
+    - user
+id: user.user.registration_developers
+targetEntityType: user
+bundle: user
+mode: registration_developers
+content:
+  account:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_real:
+    weight: 1
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+hidden:
+  language: true
+  timezone: true

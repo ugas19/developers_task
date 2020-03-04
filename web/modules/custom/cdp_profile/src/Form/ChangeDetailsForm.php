@@ -16,7 +16,7 @@ class ChangeDetailsForm extends ContentEntityForm {
    * {@inheritdoc}
    */
   public function getFormId() {
-    return 'change_password_form';
+    return 'change_details_form';
   }
 
   /**
@@ -37,8 +37,6 @@ class ChangeDetailsForm extends ContentEntityForm {
       '#type'   => 'container',
       '#weight' => -10,
     ];
-    $form['actions'] = ['#type' => 'actions'];
-    $form['actions']['submit'] = ['#type' => 'submit', '#value' => $this->t('Submit')];
     return parent::form($form, $form_state);
   }
 
