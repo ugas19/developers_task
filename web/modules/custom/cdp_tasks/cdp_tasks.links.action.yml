@@ -1,0 +1,5 @@
+tasks.add_form:
+  route_name: entity.tasks.add_form
+  title: 'Add developer tasks'
+  appears_on:
+    - entity.tasks.collection

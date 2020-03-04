@@ -1,0 +1,7 @@
+entity.tasks.settings:
+  path: 'admin/structure/tasks'
+  defaults:
+    _form: '\Drupal\cdp_tasks\Form\TasksSettingsForm'
+    _title: 'Developer tasks'
+  requirements:
+    _permission: 'administer developer tasks'

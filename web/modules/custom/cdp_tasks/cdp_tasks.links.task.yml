@@ -1,0 +1,22 @@
+entity.tasks.settings:
+  title: Settings
+  route_name: entity.tasks.settings
+  base_route: entity.tasks.settings
+entity.tasks.view:
+  title: View
+  route_name: entity.tasks.canonical
+  base_route: entity.tasks.canonical
+entity.tasks.edit_form:
+  title: Edit
+  route_name: entity.tasks.edit_form
+  base_route: entity.tasks.canonical
+entity.tasks.delete_form:
+  title: Delete
+  route_name: entity.tasks.delete_form
+  base_route: entity.tasks.canonical
+  weight: 10
+entity.tasks.collection:
+  title: Developer tasks
+  route_name: entity.tasks.collection
+  base_route: system.admin_content
+  weight: 10

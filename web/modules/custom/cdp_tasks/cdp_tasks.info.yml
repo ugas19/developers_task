@@ -1,0 +1,14 @@
+name: cdp_tasks
+type: module
+description: 'Provides a developer tasks entity.'
+package: CDP
+core: 8.x
+core_version_requirement: ^8 || ^9
+dependencies:
+  - options
+  - link
+  - field
+  - field_ui
+  - cdp_register_form
+  - drupal:text
+configure: entity.tasks.settings
