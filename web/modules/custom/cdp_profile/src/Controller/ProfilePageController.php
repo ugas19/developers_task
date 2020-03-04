@@ -109,6 +109,8 @@ class ProfilePageController extends ControllerBase {
     $detailsform = $this->entityFormBuilder->getForm($developer, 'details_change');
 
 
+
+
     return [
       $viewBuilder->view($entity, 'profilepage'),
       $passform,

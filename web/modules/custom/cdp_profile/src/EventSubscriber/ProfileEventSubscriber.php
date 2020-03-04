@@ -53,14 +53,14 @@ class ProfileEventSubscriber implements EventSubscriberInterface {
     $roles = $this->account->getAccount()->getRoles();
     if ($this->account->id() != NULL) {
       if ($current_path === '/user/' . $this->account->id()) {
-        if ($this->routes->getRoutesByNames(['cdp_profile.developer_page']) && in_array('authenticated', $roles)) {
+        if ($this->routes->getRoutesByNames(['cdp_profile.developer_page']) && in_array('developer', $roles)) {
           $profile_page_object = Url::fromRoute('cdp_profile.developer_page');
           $profile_page_url = $profile_page_object->toString();
           $response = new RedirectResponse($profile_page_url);
           $response->send();
 
         }
-        elseif ($this->routes->getRoutesByNames(['cdp_profile.techlead_page']) && in_array('authenticated', $roles)) {
+        elseif ($this->routes->getRoutesByNames(['cdp_profile.techlead_page']) && in_array('techlead', $roles)) {
           $profile_page_object = Url::fromRoute('cdp_profile.techlead_page');
           $profile_page_url = $profile_page_object->toString();
           $response = new RedirectResponse($profile_page_url);

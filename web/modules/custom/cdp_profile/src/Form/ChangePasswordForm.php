@@ -69,24 +69,24 @@ class ChangePasswordForm extends ContentEntityForm {
    * @param \Drupal\user\UserInterface $user
    *   The user object.
    */
-  public function buildForm(array $form, FormStateInterface $form_state) {
+  public function form(array $form, FormStateInterface $form_state) {
+    $this->entity = User::load($this->currentUser()->id());
     $account = User::load($this->currentUser()->id());
     $user = $this->currentUser();
-    $config = \Drupal::config('user.settings');
-    $form['#cache']['tags'] = $config->getCacheTags();
-    $form['account'] = [
+//    $config = \Drupal::config('user.settings');
+//    $form['#cache']['tags'] = $config->getCacheTags();
+    $form['accounts'] = [
       '#type'   => 'container',
       '#weight' => -10,
     ];
     if ($user) {
-      $form['account']['pass'] = [
+      $form['accounts']['pass'] = [
         '#type' => 'password_confirm',
         '#size' => 25,
-        '#description' => $this->t('To change the current user password, enter the new password in both fields.'),
         '#required' => TRUE,
       ];
       if ($user->id() != NULL) {
-        $form['account']['current_pass'] = [
+        $form['accounts']['current_pass'] = [
           '#type' => 'password',
           '#title' => $this->t('Current password'),
           '#size' => 25,
@@ -98,16 +98,21 @@ class ChangePasswordForm extends ContentEntityForm {
           '#attributes' => ['autocomplete' => 'off'],
           '#required' => TRUE,
         ];
-        $form_state->set('user', $account);
+//        $form_state->set('user', $account);
       }
     }
 
-    $form['actions'] = ['#type' => 'actions'];
-    $form['actions']['submit'] = ['#type' => 'submit', '#value' => $this->t('Submit')];
 
-    return $form;
+    return parent::form($form, $form_state);;
   }
-
+  /**
+   * {@inheritdoc}
+   */
+  protected function actions(array $form, FormStateInterface $form_state) {
+    $element = parent::actions($form, $form_state);
+    $element['submit']['#value'] = $this->t('Change current password');
+    return $element;
+  }
   /**
    * {@inheritdoc}
    */
@@ -129,8 +134,9 @@ class ChangePasswordForm extends ContentEntityForm {
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $user = User::load($this->currentUser()->id());
     $user->setPassword($form_state->getValue('pass'));
-    $user->save();
+//    $user->save();
     $this->messenger()->addStatus($this->t('Your password has been changed.'));
   }
+
 
 }
