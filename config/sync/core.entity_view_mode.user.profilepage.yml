@@ -1,0 +1,10 @@
+uuid: 96ea8361-3183-4f2c-a04a-13a9d3665b99
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.profilepage
+label: 'Profile Page'
+targetEntityType: user
+cache: true

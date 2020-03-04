@@ -1,0 +1,30 @@
+uuid: b89b6726-fb00-4914-a2ec-b97dfc029aa8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.user.profilepage
+    - field.field.user.user.field_real
+  module:
+    - user
+id: user.user.profilepage
+targetEntityType: user
+bundle: user
+mode: profilepage
+content:
+  field_real:
+    weight: 1
+    label: inline
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  member_for:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

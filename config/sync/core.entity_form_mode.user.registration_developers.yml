@@ -1,0 +1,10 @@
+uuid: ae5be42b-9bac-460f-bc0e-9bebe6b2b748
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.registration_developers
+label: 'Registration for Developers'
+targetEntityType: user
+cache: true

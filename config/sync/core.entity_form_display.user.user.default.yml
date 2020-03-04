@@ -1,0 +1,28 @@
+uuid: 763cb238-f184-4691-b863-aa07e0bf7692
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.user.user.field_real
+  module:
+    - user
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content:
+  account:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_real:
+    type: boolean_checkbox
+    weight: 1
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden:
+  language: true
+  timezone: true

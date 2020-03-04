@@ -1,0 +1,10 @@
+uuid: c224c31e-0005-4eb7-a2ac-40c569808d46
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.details_change
+label: 'Details Change'
+targetEntityType: user
+cache: true

@@ -1,0 +1,26 @@
+uuid: 758b5865-8fd5-4c52-86aa-4cdd88ca6cb9
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.user.full
+    - field.field.user.user.field_real
+  module:
+    - user
+id: user.user.full
+targetEntityType: user
+bundle: user
+mode: full
+content:
+  field_real:
+    type: boolean
+    weight: 0
+    region: content
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+hidden:
+  member_for: true

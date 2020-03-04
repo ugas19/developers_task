@@ -1,0 +1,23 @@
+uuid: ecdcb5bb-def7-4dab-8bd5-5b92d224ef77
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.user.pass_change
+    - field.field.user.user.field_real
+  module:
+    - user
+id: user.user.pass_change
+targetEntityType: user
+bundle: user
+mode: pass_change
+content:
+  account:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_real: true
+  language: true
+  timezone: true

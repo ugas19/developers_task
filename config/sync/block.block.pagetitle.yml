@@ -1,0 +1,18 @@
+uuid: 322a7b95-796b-4108-a3c5-7b89cd2d1317
+langcode: en
+status: true
+dependencies:
+  theme:
+    - cdp_theme
+id: pagetitle
+theme: cdp_theme
+region: footer
+weight: 0
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

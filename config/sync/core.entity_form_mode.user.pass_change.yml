@@ -1,0 +1,10 @@
+uuid: 2dc9cc87-ae66-4ce2-b860-807b1ee804dd
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.pass_change
+label: 'Pass Change'
+targetEntityType: user
+cache: true
