@@ -6,6 +6,8 @@
  */
 
 use Drupal\Core\Render\Element;
+use Drupal\cdp_tasks\Form\TaskChangeTimeForm;
+use Drupal\cdp_tasks\Form\TasksForm;
 
 /**
  * Implements hook_theme().
@@ -33,4 +35,15 @@ function template_preprocess_tasks(array &$variables) {
   foreach (Element::children($variables['elements']) as $key) {
     $variables['content'][$key] = $variables['elements'][$key];
   }
+}
+
+/**
+ * Implements hook_entity_type_alter().
+ */
+function cdp_tasks_entity_type_alter(array &$entity_types) {
+
+  $entity_types['tasks']->setFormClass('changedev',TaskChangeTimeForm::class);
+  $entity_types['tasks']->setFormClass('changetech',TaskChangeTimeForm::class);
+
+
 }

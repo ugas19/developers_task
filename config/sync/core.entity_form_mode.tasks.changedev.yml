@@ -1,0 +1,10 @@
+uuid: 7808f04c-9a86-4d52-a106-6f4d42ce61f9
+langcode: en
+status: true
+dependencies:
+  module:
+    - cdp_tasks
+id: tasks.changedev
+label: changedev
+targetEntityType: tasks
+cache: true

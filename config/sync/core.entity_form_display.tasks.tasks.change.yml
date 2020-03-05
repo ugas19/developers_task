@@ -1,0 +1,32 @@
+uuid: f4060c2d-f502-4563-b382-ef9139ab148d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.tasks.change
+  module:
+    - cdp_tasks
+id: tasks.tasks.change
+targetEntityType: tasks
+bundle: tasks
+mode: change
+content:
+  actual_time:
+    type: number
+    weight: 0
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  deadline: true
+  description: true
+  developer: true
+  planned_time: true
+  status: true
+  task_status: true
+  techlead: true
+  title: true
+  uid: true
+  url: true

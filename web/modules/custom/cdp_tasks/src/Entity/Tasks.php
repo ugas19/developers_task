@@ -423,7 +423,7 @@ class Tasks extends ContentEntityBase implements TasksInterface {
         'weight' => -5,
       ])
       ->setDisplayOptions('form', [
-        'type' => 'textarea',
+        'type' => 'text_textarea',
         'weight' => -5,
       ])
       ->setDisplayConfigurable('form', TRUE)
@@ -444,7 +444,7 @@ class Tasks extends ContentEntityBase implements TasksInterface {
         'weight' => -4,
       ])
       ->setDisplayOptions('form', [
-        'type' => 'url',
+        'type' => 'uri',
         'weight' => -4,
       ])
       ->setDisplayConfigurable('form', TRUE)
@@ -532,11 +532,11 @@ class Tasks extends ContentEntityBase implements TasksInterface {
       ->setDefaultValue('')
       ->setDisplayOptions('view', [
         'label' => 'above',
-        'type' => 'integer',
+        'type' => 'number',
         'weight' => -1,
       ])
       ->setDisplayOptions('form', [
-        'type' => 'integer',
+        'type' => 'number',
         'weight' => -1,
       ])
       ->setDisplayConfigurable('form', TRUE)
@@ -553,11 +553,11 @@ class Tasks extends ContentEntityBase implements TasksInterface {
       ->setDefaultValue('')
       ->setDisplayOptions('view', [
         'label' => 'above',
-        'type' => 'integer',
+        'type' => 'number',
         'weight' => 0,
       ])
       ->setDisplayOptions('form', [
-        'type' => 'integer',
+        'type' => 'number',
         'weight' => 0,
       ])
       ->setDisplayConfigurable('form', TRUE)
@@ -574,11 +574,11 @@ class Tasks extends ContentEntityBase implements TasksInterface {
       ->setDefaultValue('')
       ->setDisplayOptions('view', [
         'label' => 'above',
-        'type' => 'integer',
+        'type' => 'number',
         'weight' => 1,
       ])
       ->setDisplayOptions('form', [
-        'type' => 'integer',
+        'type' => 'number',
         'weight' => 1,
       ])
       ->setDisplayConfigurable('form', TRUE)

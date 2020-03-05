@@ -1,0 +1,10 @@
+uuid: 2984d626-64c8-4733-8f70-690aac9f603d
+langcode: en
+status: true
+dependencies:
+  module:
+    - cdp_tasks
+id: tasks.changetech
+label: changetech
+targetEntityType: tasks
+cache: true

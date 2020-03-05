@@ -5,3 +5,18 @@ entity.tasks.settings:
     _title: 'Developer tasks'
   requirements:
     _permission: 'administer developer tasks'
+cdp_tasks.time_developer:
+  path: '/tasks/{tasks}/change-dev'
+  defaults:
+    _controller: '\Drupal\cdp_tasks\Controller\ChangeController::changedev'
+    _title: 'Change form'
+  requirements:
+    _permission: 'access content'
+cdp_tasks.time_techlead:
+  path: '/tasks/{tasks}/change-tech'
+  defaults:
+    _controller: '\Drupal\cdp_tasks\Controller\ChangeController::changetech'
+    _title: 'Change form'
+  requirements:
+    _permission: 'access content'
+
