@@ -1,0 +1,10 @@
+entity.tasks.settings:
+  title: Developer tasks
+  description: Configure a Developer tasks entity type
+  route_name:  entity.tasks.settings
+  parent: system.admin_structure
+entity.tasks.collection:
+  title: Developer taskses
+  description: List of developer taskses
+  route_name: entity.tasks.collection
+  parent: system.admin_content

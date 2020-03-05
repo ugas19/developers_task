@@ -1,0 +1,32 @@
+uuid: 09cdd249-4642-4668-ba44-e86389980c75
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.tasks.changetech
+  module:
+    - cdp_tasks
+id: tasks.tasks.changetech
+targetEntityType: tasks
+bundle: tasks
+mode: changetech
+content:
+  deadline:
+    type: number
+    weight: 0
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  actual_time: true
+  created: true
+  description: true
+  developer: true
+  planned_time: true
+  status: true
+  task_status: true
+  techlead: true
+  title: true
+  uid: true
+  url: true

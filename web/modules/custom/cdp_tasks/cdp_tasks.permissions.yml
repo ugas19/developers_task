@@ -1,0 +1,5 @@
+administer developer tasks:
+  title: 'Administer developer tasks settings'
+  restrict access: true
+access developer tasks overview:
+  title: 'Access developer tasks overview page'

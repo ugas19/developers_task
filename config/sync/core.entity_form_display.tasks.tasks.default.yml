@@ -1,0 +1,108 @@
+uuid: e077a3e8-1e0b-4bb3-988c-93f767ed9dac
+langcode: en
+status: true
+dependencies:
+  module:
+    - cdp_tasks
+    - link
+    - text
+id: tasks.tasks.default
+targetEntityType: tasks
+bundle: tasks
+mode: default
+content:
+  actual_time:
+    type: number
+    weight: 1
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  created:
+    type: datetime_timestamp
+    weight: 20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  deadline:
+    type: number
+    weight: -1
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  description:
+    type: text_textarea
+    weight: 10
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  developer:
+    type: entity_reference_autocomplete
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    weight: -3
+    region: content
+    third_party_settings: {  }
+  planned_time:
+    type: number
+    weight: 0
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: false
+    weight: 0
+    region: content
+    third_party_settings: {  }
+  task_status:
+    type: options_buttons
+    weight: -5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  techlead:
+    type: entity_reference_autocomplete
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    weight: -2
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    weight: 15
+    region: content
+    third_party_settings: {  }
+  url:
+    type: link_default
+    weight: -4
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+hidden: {  }

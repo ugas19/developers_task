@@ -1,0 +1,38 @@
+uuid: c565762f-6893-47e9-80b1-fde97a4b00d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.tasks.changedev
+  module:
+    - cdp_tasks
+id: tasks.tasks.changedev
+targetEntityType: tasks
+bundle: tasks
+mode: changedev
+content:
+  actual_time:
+    type: number
+    weight: 1
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  planned_time:
+    type: number
+    weight: 0
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  deadline: true
+  description: true
+  developer: true
+  status: true
+  task_status: true
+  techlead: true
+  title: true
+  uid: true
+  url: true
