@@ -1,0 +1,6 @@
+chart:
+  js:
+    js/Chart.js: {}
+    js/test.js: {}
+  dependencies:
+    - core/jquery

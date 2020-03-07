@@ -3,6 +3,7 @@ module:
   breakpoint: 0
   cdp_profile: 0
   cdp_register_form: 0
+  cdp_statistics: 0
   cdp_tasks: 0
   dblog: 0
   dynamic_page_cache: 0
