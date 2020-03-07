@@ -1,0 +1,6 @@
+name: 'cdp_statistics model'
+description: 'to display statistics chart'
+package: CDP
+type: module
+version: 1.x
+core: 8.x

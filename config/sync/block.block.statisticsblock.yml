@@ -1,0 +1,26 @@
+uuid: 3c7803fa-7c69-4e66-832a-9c8735c43941
+langcode: en
+status: true
+dependencies:
+  module:
+    - cdp_statistics
+    - system
+  theme:
+    - cdp_theme
+id: statisticsblock
+theme: cdp_theme
+region: content
+weight: 0
+provider: null
+plugin: statistics_block
+settings:
+  id: statistics_block
+  label: 'statistics block'
+  provider: cdp_statistics
+  label_display: visible
+visibility:
+  request_path:
+    id: request_path
+    pages: /statistics
+    negate: false
+    context_mapping: {  }
