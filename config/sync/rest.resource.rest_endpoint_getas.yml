@@ -1,0 +1,21 @@
+uuid: fd5b2dab-f574-4f44-af33-274483a66791
+langcode: en
+status: true
+dependencies:
+  module:
+    - basic_auth
+    - cdp_rest_api
+    - hal
+    - serialization
+id: rest_endpoint_getas
+plugin_id: rest_endpoint_getas
+granularity: resource
+configuration:
+  methods:
+    - GET
+    - POST
+  formats:
+    - hal_json
+    - json
+  authentication:
+    - basic_auth

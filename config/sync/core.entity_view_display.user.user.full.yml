@@ -23,4 +23,5 @@ content:
       format_custom_true: ''
     third_party_settings: {  }
 hidden:
+  langcode: true
   member_for: true

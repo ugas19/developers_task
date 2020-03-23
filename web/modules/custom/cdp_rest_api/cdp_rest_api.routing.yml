@@ -1,0 +1,8 @@
+cdp_rest_api.loginas.http:
+  path: '/user/loginas'
+  defaults:
+    _controller: \Drupal\cdp_rest_api\Controller\LoginoController::login
+  methods: [POST]
+  requirements:
+    _user_is_logged_in: 'FALSE'
+    _format: 'json'

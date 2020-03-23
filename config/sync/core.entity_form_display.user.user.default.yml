@@ -24,5 +24,6 @@ content:
       display_label: true
     third_party_settings: {  }
 hidden:
+  langcode: true
   language: true
   timezone: true

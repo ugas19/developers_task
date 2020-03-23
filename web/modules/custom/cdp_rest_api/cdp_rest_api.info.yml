@@ -1,0 +1,6 @@
+name: rest_api
+package: CDP
+type: module
+decription: 'Rest api for registration and tasks'
+version: 1.x
+core: 8.x

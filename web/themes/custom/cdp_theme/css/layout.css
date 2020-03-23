@@ -31,3 +31,24 @@
   margin: 0;
   padding: 0;
 }
+#block-mainnavigation {
+  float: left;
+  width: 100%;
+}
+#block-mainnavigation ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+#block-mainnavigation li {
+  float: left;
+}
+#block-mainnavigation li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}

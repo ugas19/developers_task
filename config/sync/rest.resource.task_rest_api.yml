@@ -1,0 +1,23 @@
+uuid: af228aba-f238-4343-a2d2-aee36c078814
+langcode: en
+status: true
+dependencies:
+  module:
+    - cdp_rest_api
+    - hal
+    - serialization
+    - user
+id: task_rest_api
+plugin_id: task_rest_api
+granularity: resource
+configuration:
+  methods:
+    - GET
+    - POST
+    - DELETE
+    - PATCH
+  formats:
+    - hal_json
+    - json
+  authentication:
+    - cookie

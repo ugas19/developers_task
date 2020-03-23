@@ -22,4 +22,5 @@ content:
     type: boolean
     region: content
 hidden:
+  langcode: true
   member_for: true

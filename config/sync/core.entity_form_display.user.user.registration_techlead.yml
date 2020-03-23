@@ -19,5 +19,6 @@ content:
     third_party_settings: {  }
 hidden:
   field_real: true
+  langcode: true
   language: true
   timezone: true
