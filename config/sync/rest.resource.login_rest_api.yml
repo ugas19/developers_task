@@ -1,0 +1,19 @@
+uuid: 03d90236-adc4-42da-8b23-abeaa6d32ed5
+langcode: en
+status: true
+dependencies:
+  module:
+    - cdp_rest_api
+    - serialization
+    - user
+id: login_rest_api
+plugin_id: login_rest_api
+granularity: resource
+configuration:
+  methods:
+    - GET
+    - POST
+  formats:
+    - json
+  authentication:
+    - cookie

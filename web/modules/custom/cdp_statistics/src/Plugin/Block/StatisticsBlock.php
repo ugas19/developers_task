@@ -23,7 +23,7 @@ class StatisticsBlock extends BlockBase implements BlockPluginInterface {
   public function build() {
 $stats = [];
 $nids = \Drupal::entityQuery('tasks')
-  ->condition('developer','4')->execute();
+  ->condition('developer',\Drupal::currentUser()->id())->execute();
 
 foreach($nids as $nid){
 

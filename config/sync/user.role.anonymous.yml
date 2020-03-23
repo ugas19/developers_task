@@ -10,3 +10,6 @@ weight: 0
 is_admin: false
 permissions:
   - 'access content'
+  - 'restful post login_rest_api'
+  - 'restful post rest_endpoint_getas'
+  - 'restful post user_registration'

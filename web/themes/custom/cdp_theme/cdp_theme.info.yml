@@ -1,5 +1,6 @@
 name: cdp_theme
 type: theme
+base theme: seven
 description: 'cdp_theme.'
 core: 8.x
 libraries:

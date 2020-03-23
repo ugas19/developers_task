@@ -25,5 +25,6 @@ content:
     type: boolean_checkbox
     region: content
 hidden:
+  langcode: true
   language: true
   timezone: true
