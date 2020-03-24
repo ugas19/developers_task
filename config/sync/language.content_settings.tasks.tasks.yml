@@ -1,0 +1,17 @@
+uuid: e793259e-0aa7-41ee-b14b-6646290288fc
+langcode: en
+status: true
+dependencies:
+  module:
+    - cdp_tasks
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: tasks.tasks
+target_entity_type_id: tasks
+target_bundle: tasks
+default_langcode: lt
+language_alterable: true

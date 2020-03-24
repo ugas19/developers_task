@@ -1,0 +1,15 @@
+display:
+  default:
+    display_options:
+      fields:
+        name:
+          label: Vardas
+        mail:
+          label: Paštas
+        field_real:
+          label: Tikras
+      header:
+        area_text_custom:
+          content: ' <a href="http://tasks.docker.localhost:8002/admin/people/create">Pridėti vartotoją!</a> '
+  page_1:
+    display_title: Puslapis

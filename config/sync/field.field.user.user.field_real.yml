@@ -13,7 +13,7 @@ bundle: user
 label: Real
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value:
   -
     value: 0

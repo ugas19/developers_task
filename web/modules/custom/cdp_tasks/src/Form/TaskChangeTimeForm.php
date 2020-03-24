@@ -2,19 +2,14 @@
 
 namespace Drupal\cdp_tasks\Form;
 
-use Drupal\cdp_tasks\TasksInterface;
 use Drupal\Core\Entity\ContentEntityForm;
-use Drupal\cdp_tasks\Entity\Tasks;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\user\Entity\User;
-use Drupal\user\UserInterface;
 
 /**
  * Provides a user password reset form.
  */
 class TaskChangeTimeForm extends ContentEntityForm {
 
-  protected $taskId;
   /**
    * {@inheritdoc}
    */
@@ -55,13 +50,13 @@ class TaskChangeTimeForm extends ContentEntityForm {
    * {@inheritdoc}
    */
   public function save(array $form, FormStateInterface $form_state) {
-//
+
     $account = $this->entity;
     $account->save();
-    if(in_array('developer', \Drupal::currentUser()->getRoles())) {
+    if (in_array('developer', \Drupal::currentUser()->getRoles())) {
       $form_state->setRedirect('view.developer_tasks.page_1');
     }
-    if(in_array('techlead', \Drupal::currentUser()->getRoles())) {
+    if (in_array('techlead', \Drupal::currentUser()->getRoles())) {
       $form_state->setRedirect('view.techlead_tasks.page_1');
     }
 

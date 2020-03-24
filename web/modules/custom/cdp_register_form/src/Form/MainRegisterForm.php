@@ -2,18 +2,19 @@
 
 namespace Drupal\cdp_register_form\Form;
 
-
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\user\RegisterForm;
 
 /**
- * Class MainRegisterForm
+ * Class MainRegisterForm.
  *
  * @package Drupal\cdp_register_form
  */
 class MainRegisterForm extends RegisterForm {
 
-
+  /**
+   * {@inheritdoc}
+   */
   public function buildForm(array $form, FormStateInterface $form_state) {
 
     $form = parent::buildForm($form, $form_state);
@@ -34,6 +35,14 @@ class MainRegisterForm extends RegisterForm {
     parent::submitForm($form, $form_state);
   }
 
+  /**
+   * Validates email with given regex.
+   *
+   * @param array $form
+   *   An associative array containing the structure of the form.
+   * @param \Drupal\Core\Form\FormStateInterface $form_state
+   *   The current state of the form.
+   */
   public function validateMail(array &$form, FormStateInterface $form_state) {
     $config = \Drupal::config('cdp_register_form.settings');
     $regex = $config->get('regex');
@@ -43,7 +52,6 @@ class MainRegisterForm extends RegisterForm {
     }
   }
 
-
   /**
    * {@inheritdoc}
    */
@@ -52,23 +60,33 @@ class MainRegisterForm extends RegisterForm {
     $element['submit']['#value'] = $this->t('Register account');
     return $element;
   }
+
   /**
-   * @param $name
+   * Create User name from email.
    *
-   * @return mixed
+   * @param string $email
+   *   Users email.
+   *
+   * @return string
+   *   mixed
    */
-  public function makeName($name) {
-    $newName = explode('@', $name);
-    $afterEta = explode('.',$newName[1]);
+  public function makeName($email) {
+    $newName = explode('@', $email);
+    $afterEta = explode('.', $newName[1]);
     return $newName[0] . '_' . $afterEta[0] . $afterEta[1];
   }
+
+  /**
+   * {@inheritdoc}
+   */
   public function save(array $form, FormStateInterface $form_state) {
     $storage = $form_state->getStorage();
-    if($storage['role']){
-       $role_id = $storage['role'];
-       $this->entity->set('roles', $role_id);
+    if ($storage['role']) {
+      $role_id = $storage['role'];
+      $this->entity->set('roles', $role_id);
     }
     parent::save($form, $form_state);
   }
+
 }
 
